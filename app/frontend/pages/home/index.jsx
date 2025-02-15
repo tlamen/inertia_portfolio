@@ -1,3 +1,4 @@
+import { Button, Text } from "@switchdreams/ui";
 import React from "react";
 
 const Index = () => {
@@ -10,6 +11,12 @@ const Index = () => {
       <div className="flex w-full justify-center">
         <button className="" onClick={() => console.log("hello")}>Teste</button>
       </div>
+      <Text>Teste</Text>
+      <Button 
+        label="alou"
+        className="border w-12 rounded-2xl m-20"
+        onClick={() => console.log("Valeu Switch")}
+      />
     </>
   );
 }

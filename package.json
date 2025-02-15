@@ -8,7 +8,9 @@
     "vite-plugin-ruby": "^5.1.1"
   },
   "dependencies": {
+    "@headlessui/tailwindcss": "^0.2.2",
     "@inertiajs/react": "^2.0.3",
+    "@switchdreams/ui": "^1.4.1",
     "@tailwindcss/vite": "^4.0.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
