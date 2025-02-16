@@ -10,13 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_04_235852) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_16_100809) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
-  create_table "test_models", force: :cascade do |t|
+  create_table "languages", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "personal_info_translations", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.bigint "personal_info_id", null: false
+    t.bigint "language_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["language_id"], name: "index_personal_info_translations_on_language_id"
+    t.index ["personal_info_id"], name: "index_personal_info_translations_on_personal_info_id"
+  end
+
+  create_table "personal_infos", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "personal_info_translations", "languages"
+  add_foreign_key "personal_info_translations", "personal_infos"
 end

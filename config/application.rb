@@ -23,6 +23,8 @@ module InertiaPortfolio
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators.system_tests = nil
+  
     def credentials_or_env(string_key, default: nil, preference: :env)
       credentials_key = string_key.downcase.to_sym
 
