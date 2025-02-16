@@ -1,6 +1,6 @@
-import { colors } from "@switchdreams/ui"
-import switchUiPlugin from "@switchdreams/ui/dist/tailwind.plugin"
-import generated from "@headlessui/tailwindcss";
+import { colors } from "@switchdreams/ui";
+import switchUiPlugin from "@switchdreams/ui/dist/tailwind.plugin";
+
 import defaultColors from "./app/frontend/constants/colors";
 
 module.exports = {
@@ -38,10 +38,6 @@ module.exports = {
           },
         },
       },
-      curvature: {
-        md: 0, // Configura a curvatura dos componentes
-        full: 0,
-      },
       fontFamily: {
         default: ["Poppins", "sans-serif"], //.. Opcional
       },
@@ -55,8 +51,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    switchUiPlugin,
-    generated({ prefix: "ui" })
-  ],
+  plugins: [switchUiPlugin],
 };

@@ -4,7 +4,7 @@ class Avo::Resources::EducationTranslation < Avo::BaseResource
   # self.search = {
   #   query: -> { query.ransack(id_eq: params[:q], m: "or").result(distinct: false) }
   # }
-  
+
   def fields
     field :id, as: :id
     field :institution, as: :text
@@ -16,5 +16,3 @@ class Avo::Resources::EducationTranslation < Avo::BaseResource
     field :education, as: :belongs_to
   end
 end
-
-

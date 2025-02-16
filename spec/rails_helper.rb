@@ -11,7 +11,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 # return unless Rails.env.test?
 require 'rspec/rails'
 
-#FactoryBot
+# FactoryBot
 require "support/factory_bot"
 
 # ActionPolicy

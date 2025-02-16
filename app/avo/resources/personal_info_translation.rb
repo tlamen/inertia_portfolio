@@ -4,7 +4,7 @@ class Avo::Resources::PersonalInfoTranslation < Avo::BaseResource
   # self.search = {
   #   query: -> { query.ransack(id_eq: params[:q], m: "or").result(distinct: false) }
   # }
-  
+
   def fields
     field :id, as: :id
     field :title, as: :text
@@ -13,5 +13,3 @@ class Avo::Resources::PersonalInfoTranslation < Avo::BaseResource
     field :language, as: :belongs_to
   end
 end
-
-
