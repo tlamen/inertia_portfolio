@@ -4,41 +4,20 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Timeline from "../../components/Timeline";
 
-const Index = ({language, languageOptions, personalInfo}) => {
-
-  const events = [
-    {
-      title: "Title 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non tempor tortor. Sed euismod, neque a cursus vehicula"
-    },
-    {
-      title: "Title 2",
-      description: "Description 2"
-    },
-    {
-      title: "Title 2",
-      description: "Description 2"
-    },
-    {
-      title: "Title 2",
-      description: "Description 2"
-    },
-    {
-      title: "Title 2",
-      description: "Description 2"
-    }
-  ]
+const Index = ({language, languageOptions, personalInfo, experiences}) => {
   return (
-    <div className="bg-[#F1FAEE] w-full text-black">
+    <div className="bg-[#F1FAEE] w-full text-black flex flex-col justify-center items-center">
       <Header language={language} languageOptions={languageOptions} />
-      <div className="pt-32">
-        <Hero personalInfo={personalInfo}/>
-      </div>
+      <div className="w-3/4">
+        <div className="md:pt-10 pt-52">
+          <Hero personalInfo={personalInfo}/>
+        </div>
 
-      <div className="flex flex-col items-start justify-start ">
-        <Timeline 
-          events={events}
-        />
+        <div className="flex flex-col items-start justify-start pt-12 md:px-10">
+          <Timeline 
+            events={experiences}
+          />
+        </div>
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ const Hero = ({personalInfo}) => {
   console.log(personalInfo.find((info) => info.label === "title"))
   return (
     <div className="flex w-full mt-6 md:mt-28 items-center justify-center">
-      <div className="flex flex-col w-3/4 md:w-1/2">
+      <div className="flex flex-col">
         <div className="mb-4">
           <Text className="text-4xl">Bernardo Manciola Lobo</Text>
           <Text className="text-lg">{personalInfo.find((info) => info.label === "title").description}</Text>
