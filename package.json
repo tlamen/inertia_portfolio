@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@headlessui/tailwindcss": "^0.2.2",
+    "@heroicons/react": "^2.2.0",
     "@inertiajs/react": "^2.0.3",
     "@switchdreams/ui": "^1.4.1",
     "@tailwindcss/vite": "^4.0.6",

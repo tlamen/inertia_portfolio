@@ -4,8 +4,8 @@ import React from "react";
 
 const Header = ({language, languageOptions}) => {
   return (
-    <div className="flex justify-between w-full h-28 border-b pt-2 px-8 items-center fixed">
-      <div>
+    <div className="flex justify-between w-full h-28 border-b-2 border-[#1D3557] pt-2 px-8 items-center fixed z-3 bg-[#F1FAEE]">
+      <div className="text-[#1D3557]">
         <div className="md:hidden text-xl">
           <Text className="text-2xl font-bold font-serif">B</Text>
           <Text className="text-2xl font-bold font-serif">M</Text>
@@ -18,16 +18,16 @@ const Header = ({language, languageOptions}) => {
         </div>
       </div>
 
-      <div>
+      <div className="text-[#1D3557]">
         <Text>Experiência</Text>
         <Text>Projetos</Text>
         <Text>Educação</Text>
         <Text>Habilidades</Text>
       </div>
 
-      <div className="text-black w-40">
+      <div className="text-[#1D3557] w-40">
         <Select
-          className="text-white w-full"
+          className="w-full text-[#1D3557]"
           options={languageOptions}
           value={languageOptions.find((l) => l.value === language)}
           onChange={(e) => router.get(`/${e.value}`)}

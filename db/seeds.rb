@@ -13,9 +13,9 @@ Language.create!(name: "Português", acronym: "pt")
 Language.create!(name: "Español", acronym: "es")
 
 phone = PersonalInfo.create!(label: "phone")
-PersonalInfoTranslation.create!(personal_info: phone, language: Language.find_by(acronym: "en"), title: "Phone", description: "+61 041 587 0376 | +55 61 981050880")
-PersonalInfoTranslation.create!(personal_info: phone, language: Language.find_by(acronym: "pt"), title: "Telefone", description: "+61 041 587 0376 | +55 61 981050880")
-PersonalInfoTranslation.create!(personal_info: phone, language: Language.find_by(acronym: "es"), title: "Teléfono", description: "+61 041 587 0376 | +55 61 981050880")
+PersonalInfoTranslation.create!(personal_info: phone, language: Language.find_by(acronym: "en"), title: "Phone", description: "+61 041 587 0376")
+PersonalInfoTranslation.create!(personal_info: phone, language: Language.find_by(acronym: "pt"), title: "Telefone", description: "+55 61 981050880")
+PersonalInfoTranslation.create!(personal_info: phone, language: Language.find_by(acronym: "es"), title: "Teléfono", description: "+55 61 981050880")
 
 email = PersonalInfo.create!(label: "email")
 PersonalInfoTranslation.create!(personal_info: email, language: Language.find_by(acronym: "en"), title: "Email", description: "bernardolobo3@gmail.com")

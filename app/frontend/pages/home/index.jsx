@@ -5,7 +5,7 @@ import Hero from "../../components/Hero";
 
 const Index = ({language, languageOptions, personalInfo}) => {
   return (
-    <div className="bg-[#101E42] h-screen w-full text-white">
+    <div className="bg-[#F1FAEE] w-full text-black">
       <Header language={language} languageOptions={languageOptions} />
       <div className="pt-32">
         <Hero personalInfo={personalInfo}/>
