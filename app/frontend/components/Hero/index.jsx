@@ -4,7 +4,6 @@ import { Select, Text } from "@switchdreams/ui";
 import React from "react";
 
 const Hero = ({personalInfo}) => {
-  console.log(personalInfo.find((info) => info.label === "title"))
   return (
     <div className="flex w-full mt-6 md:mt-28 items-center justify-center">
       <div className="flex flex-col">
