@@ -9,14 +9,16 @@ class HomeController < ApplicationController
     personalInfo = PersonalInfoTranslation.where(language: language)
     experiences = ExperienceTranslation.where(language: language).order(id: :desc)
 
-    projects = ProjectTranslation.where(language: language).order(id: :desc)
+    public_projects = ProjectTranslation.includes(:project).where(language: language, project: { public: true }).order(title: :asc)
+    private_projects = ProjectTranslation.includes(:project).where(language: language, project: { public: false }).order(title: :asc)
 
     render inertia: "home/index", props: {
       language: language.acronym,
       languageOptions: languageOptions,
       personalInfo: serialize(personalInfo, PersonalInfoTranslationSerializer),
       experiences: serialize(experiences, ExperienceTranslationSerializer),
-      projects: serialize(projects, ProjectTranslationSerializer)
+      public_projects: serialize(public_projects, ProjectTranslationSerializer),
+      private_projects: serialize(private_projects, ProjectTranslationSerializer)
     }
   end
 end

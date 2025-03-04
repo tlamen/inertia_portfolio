@@ -3,9 +3,9 @@ import React from "react";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import Timeline from "../../components/Timeline";
+import Projects from "../../components/Projects";
 
-const Index = ({language, languageOptions, personalInfo, experiences, projects}) => {
-  console.log(projects)
+const Index = ({language, languageOptions, personalInfo, experiences, public_projects, private_projects}) => {
   return (
     <div className="bg-[#F1FAEE] w-full text-black flex flex-col justify-center items-center">
       <Header language={language} languageOptions={languageOptions} />
@@ -22,6 +22,7 @@ const Index = ({language, languageOptions, personalInfo, experiences, projects})
 
         <div className="flex flex-col items-start justify-start pt-12 md:px-10">
           <Text className="text-4xl">Projetos</Text>
+          <Projects public_projects={public_projects} private_projects={private_projects}/>
         </div>
       </div>
     </div>
