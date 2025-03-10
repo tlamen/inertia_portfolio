@@ -22,13 +22,13 @@ Avo.configure do |config|
   end
 
   ## == Authentication ==
-  # config.current_user_method = :current_user
+  config.current_user_method = :current_user
   # config.authenticate_with do
   # end
 
   ## == Authorization ==
-  # config.is_admin_method = :is_admin
-  # config.is_developer_method = :is_developer
+  # config.is_admin_method = :is_admin?
+  # config.is_developer_method = :is_admin?
   # config.authorization_methods = {
   #   index: 'index?',
   #   show: 'show?',
@@ -43,6 +43,9 @@ Avo.configure do |config|
   config.authorization_client = nil
   config.explicit_authorization = true
 
+  config.authenticate_with do
+    redirect_to "/users/sign_in" unless current_user.is_admin?
+  end
   ## == Localization ==
   # config.locale = 'en-US'
 
