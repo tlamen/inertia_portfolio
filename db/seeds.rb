@@ -141,3 +141,5 @@ skill12 = Skill.create!(rating: 1)
 SkillTranslation.create!(skill: skill12, language: Language.find_by(acronym: "en"), title: "Embeeded systems")
 SkillTranslation.create!(skill: skill12, language: Language.find_by(acronym: "pt"), title: "Sistemas embarcados")
 SkillTranslation.create!(skill: skill12, language: Language.find_by(acronym: "es"), title: "Sistemas embarcados")
+
+User.create!(email: credentials_or_env["EMAIL"], password: credentials_or_env["PASSWORD"], admin: true)
