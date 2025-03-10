@@ -4,8 +4,8 @@ import React from "react";
 const ProjectCard = ({project}) => {
   return (
     <div className="flex w-full my-2 border-l-2 border-[#1D3557] pl-2">
-      <div className="flex flex-col w-full">
-        <a href={project.url} target="_blank" className="text-3xl">{project.title}</a>
+      <div className="flex flex-col">
+        <a href={project.url} target="_blank" className="text-3xl w-fit">{project.title}</a>
         <Text className="text-lg">{project.stakeholder}</Text>
         <Text>{project.description}</Text>
       </div>
