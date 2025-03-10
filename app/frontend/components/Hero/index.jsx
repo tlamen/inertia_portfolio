@@ -11,7 +11,7 @@ const Hero = ({personalInfo}) => {
           <Text className="text-4xl">Bernardo Manciola Lobo</Text>
           <Text className="text-lg">{personalInfo.find((info) => info.label === "title").description}</Text>
         </div>
-        <Text className="text-xl">{personalInfo.find((info) => info.label === "description").description}</Text>
+        <Text className="text-xl mb-2">{personalInfo.find((info) => info.label === "description").description}</Text>
         <div className="flex">
           <PhoneIcon className="w-6 mr-2"/>
           {personalInfo.find((info) => info.label === "phone").description}

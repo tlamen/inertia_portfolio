@@ -81,3 +81,63 @@ project9 = Project.create!(stakeholder: "Bernardo M Lobo", url: "", public: true
 ProjectTranslation.create!(project: project9, language: Language.find_by(acronym: "en"), title: "Personal Portfolio", description: "This portfolio you're visiting right now! Built with ruby on rails and react JS through inertia. Built to be a website with dynamic content where I can showcase my previous work")
 ProjectTranslation.create!(project: project9, language: Language.find_by(acronym: "pt"), title: "Portfólio Pessoal", description: "Este portfólio que você está visitando agora! Construído com ruby on rails e react JS atraves do inertia. Construído para ser um site com conteúdo dinâmico onde posso mostrar meu trabalho anterior")
 ProjectTranslation.create!(project: project9, language: Language.find_by(acronym: "es"), title: "Portafolio Personal", description: "Este portafolio que está visitando ahora! Construido con ruby on rails y react JS a través de inertia. Construido para ser un sitio con contenido dinámico donde puedo mostrar mi trabajo anterior")
+
+skill1 = Skill.create!(rating: 5)
+SkillTranslation.create!(skill: skill1, language: Language.find_by(acronym: "en"), title: "Ruby on Rails")
+SkillTranslation.create!(skill: skill1, language: Language.find_by(acronym: "pt"), title: "Ruby on Rails")
+SkillTranslation.create!(skill: skill1, language: Language.find_by(acronym: "es"), title: "Ruby on Rails")
+
+skill2 = Skill.create!(rating: 4)
+SkillTranslation.create!(skill: skill2, language: Language.find_by(acronym: "en"), title: "React JS")
+SkillTranslation.create!(skill: skill2, language: Language.find_by(acronym: "pt"), title: "React JS")
+SkillTranslation.create!(skill: skill2, language: Language.find_by(acronym: "es"), title: "React JS")
+
+skill3 = Skill.create!(rating: 4)
+SkillTranslation.create!(skill: skill3, language: Language.find_by(acronym: "en"), title: "Python")
+SkillTranslation.create!(skill: skill3, language: Language.find_by(acronym: "pt"), title: "Python")
+SkillTranslation.create!(skill: skill3, language: Language.find_by(acronym: "es"), title: "Python")
+
+skill4 = Skill.create!(rating: 3)
+SkillTranslation.create!(skill: skill4, language: Language.find_by(acronym: "en"), title: "C/C++")
+SkillTranslation.create!(skill: skill4, language: Language.find_by(acronym: "pt"), title: "C/C++")
+SkillTranslation.create!(skill: skill4, language: Language.find_by(acronym: "es"), title: "C/C++")
+
+skill5 = Skill.create!(rating: 4)
+SkillTranslation.create!(skill: skill5, language: Language.find_by(acronym: "en"), title: "Rest API")
+SkillTranslation.create!(skill: skill5, language: Language.find_by(acronym: "pt"), title: "Rest API")
+SkillTranslation.create!(skill: skill5, language: Language.find_by(acronym: "es"), title: "Rest API")
+
+skill6 = Skill.create!(rating: 4)
+SkillTranslation.create!(skill: skill6, language: Language.find_by(acronym: "en"), title: "SQL and databases")
+SkillTranslation.create!(skill: skill6, language: Language.find_by(acronym: "pt"), title: "SQL e bancos de dados")
+SkillTranslation.create!(skill: skill6, language: Language.find_by(acronym: "es"), title: "SQL y bases de datos")
+
+skill7 = Skill.create!(rating: 5)
+SkillTranslation.create!(skill: skill7, language: Language.find_by(acronym: "en"), title: "Git")
+SkillTranslation.create!(skill: skill7, language: Language.find_by(acronym: "pt"), title: "Git")
+SkillTranslation.create!(skill: skill7, language: Language.find_by(acronym: "es"), title: "Git")
+
+skill8 = Skill.create!(rating: 2)
+SkillTranslation.create!(skill: skill8, language: Language.find_by(acronym: "en"), title: "Linux Operating systems")
+SkillTranslation.create!(skill: skill8, language: Language.find_by(acronym: "pt"), title: "Sistemas Operacionais Linux")
+SkillTranslation.create!(skill: skill8, language: Language.find_by(acronym: "es"), title: "Sistemas Operativos Linux")
+
+skill9 = Skill.create!(rating: 1)
+SkillTranslation.create!(skill: skill9, language: Language.find_by(acronym: "en"), title: "Docker")
+SkillTranslation.create!(skill: skill9, language: Language.find_by(acronym: "pt"), title: "Docker")
+SkillTranslation.create!(skill: skill9, language: Language.find_by(acronym: "es"), title: "Docker")
+
+skill10 = Skill.create!(rating: 4)
+SkillTranslation.create!(skill: skill10, language: Language.find_by(acronym: "en"), title: "Office 365")
+SkillTranslation.create!(skill: skill10, language: Language.find_by(acronym: "pt"), title: "Pacote Office 365")
+SkillTranslation.create!(skill: skill10, language: Language.find_by(acronym: "es"), title: "Office 365")
+
+skill11 = Skill.create!(rating: 1)
+SkillTranslation.create!(skill: skill11, language: Language.find_by(acronym: "en"), title: "IP network")
+SkillTranslation.create!(skill: skill11, language: Language.find_by(acronym: "pt"), title: "Rede IP")
+SkillTranslation.create!(skill: skill11, language: Language.find_by(acronym: "es"), title: "Red IP")
+
+skill12 = Skill.create!(rating: 1)
+SkillTranslation.create!(skill: skill12, language: Language.find_by(acronym: "en"), title: "Embeeded systems")
+SkillTranslation.create!(skill: skill12, language: Language.find_by(acronym: "pt"), title: "Sistemas embarcados")
+SkillTranslation.create!(skill: skill12, language: Language.find_by(acronym: "es"), title: "Sistemas embarcados")

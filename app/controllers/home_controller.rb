@@ -12,13 +12,16 @@ class HomeController < ApplicationController
     public_projects = ProjectTranslation.includes(:project).where(language: language, project: { public: true }).order(title: :asc)
     private_projects = ProjectTranslation.includes(:project).where(language: language, project: { public: false }).order(title: :asc)
 
+    skills = SkillTranslation.includes(:skill).where(language: language).order(skill: { rating: :desc })
+
     render inertia: "home/index", props: {
       language: language.acronym,
       languageOptions: languageOptions,
       personalInfo: serialize(personalInfo, PersonalInfoTranslationSerializer),
       experiences: serialize(experiences, ExperienceTranslationSerializer),
       public_projects: serialize(public_projects, ProjectTranslationSerializer),
-      private_projects: serialize(private_projects, ProjectTranslationSerializer)
+      private_projects: serialize(private_projects, ProjectTranslationSerializer),
+      skills: serialize(skills, SkillTranslationSerializer)
     }
   end
 end

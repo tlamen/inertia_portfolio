@@ -19,13 +19,6 @@ const Header = ({language, languageOptions}) => {
           </div>
         </div>
 
-        <div className="text-[#1D3557] md:block hidden">
-          <Text>Experiência</Text>
-          <Text>Projetos</Text>
-          <Text>Educação</Text>
-          <Text>Habilidades</Text>
-        </div>
-
         <div className="text-[#1D3557] w-40">
           <Select
             className="w-full text-[#1D3557]"
@@ -35,13 +28,6 @@ const Header = ({language, languageOptions}) => {
           />
         </div>
       </div>
-
-      <div className="text-[#1D3557] md:hidden block">
-          <Text>Experiência</Text>
-          <Text>Projetos</Text>
-          <Text>Educação</Text>
-          <Text>Habilidades</Text>
-        </div>
     </div>
   );
 }
