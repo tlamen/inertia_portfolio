@@ -6,6 +6,11 @@ import Timeline from "../../components/Timeline";
 import Projects from "../../components/Projects";
 
 const Index = ({language, languageOptions, personalInfo, experiences, public_projects, private_projects}) => {
+  const projectTranslations = {
+    "en": "Projects",
+    "pt": "Projetos",
+    "es": "Proyectos"
+  }
   return (
     <div className="bg-[#F1FAEE] w-full text-black flex flex-col justify-center items-center">
       <Header language={language} languageOptions={languageOptions} />
@@ -14,14 +19,14 @@ const Index = ({language, languageOptions, personalInfo, experiences, public_pro
           <Hero personalInfo={personalInfo}/>
         </div>
 
-        <div className="flex flex-col items-start justify-start pt-12 md:px-10">
+        <div className="flex flex-col items-start justify-start py-12 md:px-10">
           <Timeline 
             events={experiences}
           />
         </div>
 
-        <div className="flex flex-col items-start justify-start pt-12 md:px-10">
-          <Text className="text-4xl">Projetos</Text>
+        <div className="flex flex-col items-start justify-start">
+          <Text className="text-4xl mb-4">{projectTranslations[language]}</Text>
           <Projects public_projects={public_projects} private_projects={private_projects}/>
         </div>
       </div>
