@@ -8,6 +8,9 @@ import Skills from "../../components/Skills";
 import Footer from "../../components/Footer";
 
 const Index = ({language, languageOptions, personalInfo, experiences, public_projects, private_projects, skills}) => {  
+  const supportedLanguages = ["en", "pt", "es"];
+  const currentLanguage = supportedLanguages.includes(language) ? language : "en";
+
   const projectTranslations = {
     "en": "Projects",
     "pt": "Projetos",
@@ -27,7 +30,7 @@ const Index = ({language, languageOptions, personalInfo, experiences, public_pro
   }
   return (
     <div className="bg-[#F1FAEE] w-full text-black flex flex-col justify-center items-center">
-      <Header language={language} languageOptions={languageOptions} />
+      <Header language={currentLanguage} languageOptions={languageOptions} />
       <div className="w-3/4">
         <div className="md:pt-10 pt-28">
           <Hero personalInfo={personalInfo}/>
@@ -40,13 +43,13 @@ const Index = ({language, languageOptions, personalInfo, experiences, public_pro
         </div>
 
         <div className="flex flex-col items-start justify-start">
-          <Text className="text-4xl mb-4">{projectTranslations[language]}</Text>
+          <Text className="text-4xl mb-4">{projectTranslations[currentLanguage]}</Text>
           <Projects public_projects={public_projects} private_projects={private_projects}/>
         </div>
 
         <div className="flex flex-col items-start justify-start py-12">
-          <Text className="text-4xl">{skillTranslations[language]}</Text>
-          <Text className="text-md mb-4">{skillDescriptionTranslations[language]}</Text>
+          <Text className="text-4xl">{skillTranslations[currentLanguage]}</Text>
+          <Text className="text-md mb-4">{skillDescriptionTranslations[currentLanguage]}</Text>
           <Skills skills={skills}/>
         </div>
       </div>
