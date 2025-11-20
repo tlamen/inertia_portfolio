@@ -11,7 +11,7 @@ jobs:
     outputs:
       docker-tag: ${{ steps.docker-tag.outputs.tag }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set Docker tag
         id: docker-tag
